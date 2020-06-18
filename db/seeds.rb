@@ -19,3 +19,10 @@ end
 sweets.each do |sweet|
   Sweet.create(name: sweet)
 end
+
+puts "... creating vendor_sweet"
+VendorSweet.create(vendor: Vendor.first, sweet: Sweet.second, price: 15 )
+VendorSweet.create(vendor: Vendor.second, sweet: Sweet.first, price: 16 )
+VendorSweet.create(vendor: Vendor.third, sweet: Sweet.fourth, price: 18 )
+VendorSweet.create(vendor: Vendor.fourth, sweet: Sweet.third, price: 20 )
+puts "... finished "

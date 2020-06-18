@@ -1,0 +1,9 @@
+<h1>Sweet's show page</h1>
+
+<p> Sweet's name: <%= @sweet.name %> </p> 
+
+<p> Vendors that they sell</p>
+
+<% @sweet.vendors.each do |t| %>
+<%= link_to t.name, vendors_path(t) %>
+<% end %>
